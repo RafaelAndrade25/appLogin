@@ -219,7 +219,7 @@
         </div>
 
         <!-- Formulário de login -->
-        <form th:action="@{/logar}" method="post">
+        <form th:action="@{/logar}" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input
@@ -252,6 +252,7 @@
             </div>
 
             <button type="submit" class="btn-login">ENTRAR</button>
+            <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
         </form>
 
         <div class="signup-link">
